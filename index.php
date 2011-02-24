@@ -97,28 +97,6 @@ if(!empty($request)){
 				<?php } ?>
 			
 			
-				<!--
-				<div id="sell" style="width:500px;">
-				
-					<div style="width:50%;">
-						<input type="text" name="price" />
-					
-						<select name="currency">
-						
-							<?php
-							
-								
-							
-							
-							?>
-						
-						</select>
-					</div>
-				
-				</div>
-				-->
-			
-		
 		</div>
 	
 		<div id="submit" style="text-align:right;width:890px;margin-left:auto;margin-right:auto;padding:10px;background-color:#e3e3e3;padding-bottom:100px;">
