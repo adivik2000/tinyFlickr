@@ -1,5 +1,14 @@
 <?php session_start();
 
+/**
+ * tinyFlickr - Feb 2011
+ * - The end-user is required to sign in to PayPal and give permission to this API.
+ *
+ * @author Melvin Tercan (http://twitter.com/melvinmt)
+ * @link http://developers.tinypay.me
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ */
+
 if(!isset($_SESSION['phpFlickr_auth_token']) OR isset($_GET['logout'])){
 	$f->auth("read");
 	exit;

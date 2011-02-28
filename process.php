@@ -1,5 +1,13 @@
 <?php session_start();
 
+/**
+ * tinyFlickr - Feb 2011
+ *
+ * @author Melvin Tercan (http://twitter.com/melvinmt)
+ * @link http://developers.tinypay.me
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ */
+
 require_once('config.php');
 require_once('phpFlickr-3.1/phpFlickr.php');
 require_once('tinypay-api/Tinypayme.php');
@@ -103,7 +111,7 @@ if(isset($_SESSION['tiny_access_token']) AND isset($_SESSION['post'])){
 										// first, save medium image
 										
 										$ch = curl_init($medium['source']);
-										$medium_local_path = ini_get('upload_tmp_dir').'/'.time().'_'.basename($medium['source']);
+										$medium_local_path = UPLOAD_DIR.'/'.time().'_'.basename($medium['source']);
 										$parse = parse_url($medium_local_path);
 										$medium_local_path = $parse['path']; // clean up dirty query strings from file name
 										
@@ -117,7 +125,7 @@ if(isset($_SESSION['tiny_access_token']) AND isset($_SESSION['post'])){
 										// then, the large image
 										
 										$ch = curl_init($large['source']);
-										$large_local_path = ini_get('upload_tmp_dir').'/'.time().'_'.basename($large['source']);
+										$large_local_path = UPLOAD_DIR.'/'.time().'_'.basename($large['source']);
 										$parse = parse_url($large_local_path);
 										$large_local_path = $parse['path']; // clean up dirty query strings from file name
 										

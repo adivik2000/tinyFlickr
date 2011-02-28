@@ -1,10 +1,19 @@
 <?php
+
+/**
+ * tinyFlickr - Feb 2011
+ *
+ * @author Melvin Tercan (http://twitter.com/melvinmt)
+ * @link http://developers.tinypay.me
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ */
+
+session_destroy();
 session_start();
 
+// set variables
 $_SESSION['photos'] = array();
 $_SESSION['user'] = null;
-
-// a tiny flickr implementation
 
 require_once('config.php');
 require_once('phpFlickr-3.1/phpFlickr.php');

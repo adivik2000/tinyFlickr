@@ -1,5 +1,14 @@
 <?php session_start();
 
+/**
+ * tinyFlickr - Feb 2011
+ * - The user can alter the prices, titles and descriptions of all selected pictures
+ * 
+ * @author Melvin Tercan (http://twitter.com/melvinmt)
+ * @link http://developers.tinypay.me
+ * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+ */
+
 require_once('config.php');
 require_once('phpFlickr-3.1/phpFlickr.php');
 require_once('tinypay-api/Tinypayme.php');
