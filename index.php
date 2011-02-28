@@ -9,8 +9,11 @@
  */
 
 session_start();
-session_destroy();
-session_start();
+
+if(!isset($_GET['login'])){
+	session_destroy();
+	session_start();
+}
 
 // set variables
 $_SESSION['photos'] = array();

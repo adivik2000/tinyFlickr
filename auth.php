@@ -34,4 +34,4 @@ if ( isset($_SESSION['phpFlickr_auth_redirect']) && !empty($_SESSION['phpFlickr_
        $f->auth_getToken($_GET['frob']);
 }
 
-	header("Location: index.php");
+	header("Location: index.php?login=1");
