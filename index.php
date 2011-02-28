@@ -8,6 +8,7 @@
  * @license http://opensource.org/licenses/gpl-license.php GNU Public License
  */
 
+session_start();
 session_destroy();
 session_start();
 
