@@ -105,7 +105,7 @@ if(isset($_POST['photo_ids']) AND isset($_SESSION['photos'])){
 						</div>
 
 				<div id="submit" style="text-align:right;width:890px;margin-left:auto;margin-right:auto;padding:10px;background-color:#e3e3e3;padding-bottom:100px;">
-					<input type="submit" value="NEXT &raquo;" style="font-size:26px; />
+					<input type="submit" value="NEXT &raquo;" style="font-size:26px;" />
 				</div>
 
 
