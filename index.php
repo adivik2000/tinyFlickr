@@ -48,28 +48,12 @@ $params = array(
 
 $request = $f->people_getPhotos($user['nsid'], $params);
 
-// echo '<pre>';
-// var_dump($photos);
-// echo '</pre>';
-
 if(!empty($request)){
 	
 	$photos = array();
 	
 	foreach ($request['photos']['photo'] as $photo){
-		
-		// http://farm{farm-id}.static.flickr.com/{server-id}/{id}_{secret}.jpg
-		
-		// $url = 'http://farm'.$photo['farm'].'.static.flickr.com/'.$photo['server'].'/'.$photo['id'].'_'.$photo['secret'].'_t.jpg';
-		
-		// echo '<p>'.$url.'</p>';
-		
-		// echo '<img src="'.$url.'" style="float:left;margin:2px;" />';
-		
-		// $url = 'http://farm'.$photo['farm'].'.static.flickr.com/'.$photo['server'].'/'.$photo['id'].'_'.$photo['secret'].'_s.jpg';
-		// echo '<img src="'.$url.'" style="float:left;margin:2px;" />';
-		
-		
+				
 		$photos[$photo['id']] = $photo;
 		
 	}
@@ -113,7 +97,7 @@ if(!empty($request)){
 		</div>
 	
 		<div id="submit" style="text-align:right;width:890px;margin-left:auto;margin-right:auto;padding:10px;background-color:#e3e3e3;padding-bottom:100px;">
-			<input type="submit" value="NEXT &raquo;" style="font-size:26px; />
+			<input type="submit" value="NEXT &raquo;" style="font-size:26px;" />
 		</div>
 	
 	

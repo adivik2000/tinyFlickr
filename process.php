@@ -29,16 +29,11 @@ $user = $_SESSION['user'];
 if(!isset($_SESSION['tiny_access_token']) AND isset($_GET['code'])){
 	
 	$request = $tinypay->getOAuthAccessToken(TINY_ACCESS_TOKEN, $_GET['code']);
-	
-	echo '<pre>';
-	var_dump($request);
-	echo '</pre>';
-	
+		
 	if(isset($request->result->access_token)){
 		
 		$_SESSION['tiny_access_token'] = $request->result->access_token;
 		
-		echo $_SESSION['tiny_access_token'];
 	}
 	
 }

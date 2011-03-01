@@ -26,12 +26,6 @@ $currencies = isset($request->result) ? $request->result : array();
 
 $f = new phpFlickr(FLICKR_KEY, FLICKR_SECRET);
 
-/*
-echo '<pre>';
-var_dump($_POST);
-echo '</pre>';
-*/
-
 if(isset($_POST['photo_ids']) AND isset($_SESSION['photos'])){
 	$photo_ids = $_POST['photo_ids'];
 	
